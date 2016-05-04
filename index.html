@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title></title>
+</head>
+<body id="body">
+    <div id="root" class="container">
+        <div id="top_nav" class="top-nav">
+            <div class="back-icon"></div>
+            <div class="back-title">回到书架</div>
+        </div>
+        <div id="mid_action" class="mid-action"></div>
+        <div id="fiction_chapter_title"></div>
+        <div id="fiction_container" class="fiction-container">
+
+        </div>
+        <div class="button-bar">
+            <ul class="u-tab">
+                <li id="prev_button" class="prev_button">上一章</li>
+                <li id="next_button" class="next_button">下一章</li>
+            </ul>
+        </div>
+        <div id="font_container" class="font-container">
+            <div class="child-mod">
+                <span>字号</span>
+                <button id="large_button" class="large-button">大</button>
+                <button id="small_button" class="small-button">小</button>
+            </div>
+            <div id="color_container" class="color-container child-mod">
+                <span>背景</span>
+                <div class="bk-color bk-color1"></div>
+                <div class="bk-color bk-color2"></div>
+                <div class="bk-color bk-color3"></div>
+                <div class="bk-color bk-color4"></div>
+                <div class="bk-color bk-color5"></div>
+            </div>
+        </div>
+        <div id="bottom_nav" class="bottom-nav">
+            <div id="cata_button" class="bottom-title cata-title">目录</div>
+            <div id="font_button" class="bottom-title font-title">字体</div>
+            <div id="night_button" class="bottom-title night-title">夜间</div>
+        </div>
+    </div>
+</body>
+    <script src="lib/zepto.min.js" rel="javascript"></script>
+    <script>window.jQuery = $;</script>
+    <script src="js/jquery.base64.js" rel="javascript"></script>
+    <script src="js/jquery.jsonp.js" rel="javascript"></script>
+    <script src="js/control.js" rel="javascript"></script>
+</html>
