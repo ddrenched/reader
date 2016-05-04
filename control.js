@@ -91,7 +91,7 @@
         };
         //获得章节信息(chapter.json)
         var getFictionInfo = function(callback){
-            $.get('data/chapter.json', function(data){
+            $.get('chapter.json', function(data){
                 //获得章节信息后的回调
                 Chapter_id = data.chapters[1].chapter_id;
                 Chapter_total = data.chapters.length;
@@ -100,7 +100,7 @@
         };
         //获得章节内的小说的url(dataX.json)
         var getCurChapterContent = function(chapter_id, callback){
-            $.get('data/data' + chapter_id + '.json', function(data){
+            $.get('data' + chapter_id + '.json', function(data){
                 //如果服务器正常,取出url
                 if(data.result == 0){
                     var url = data.jsonp;
