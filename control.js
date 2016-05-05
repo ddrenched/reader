@@ -93,7 +93,10 @@
         var getFictionInfo = function(callback){
             $.get('chapter.json', function(data){
                 //获得章节信息后的回调
-                Chapter_id = data.chapters[1].chapter_id;
+                Chapter_id = Util.StorageGetter('last_chapter_id');
+                if(Chapter_id == null){
+                    Chapter_id = data.chapters[1].chapter_id;
+                }
                 Chapter_total = data.chapters.length;
                 callback && callback();
             }, 'json');
@@ -118,6 +121,7 @@
             }
             Chapter_id = Chapter_id - 1;
             getCurChapterContent(Chapter_id, UIcallback)
+            Util.StorageSetter('last_chapter_id', Chapter_id);
         };
         //下一章
         var nextChapter = function(UIcallback){
@@ -127,6 +131,7 @@
             }
             Chapter_id = Chapter_id + 1;
             getCurChapterContent(Chapter_id, UIcallback)
+            Util.StorageSetter('last_chapter_id', Chapter_id);
         };
         return {
             init: init,
